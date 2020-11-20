@@ -1,0 +1,50 @@
+.banner {
+  background-image: url(../../img/index-background-desktop2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: @basic-background-opacity;
+  .banner__wrapper {
+    background-color: @basic-background-opacity;
+    width: 100%;
+    height: 100%;
+    padding: 27px 35px;
+  }
+}
+
+.banner__header,
+.banner__discription,
+.banner__button {
+  font-family: @header-family;
+  color: @white-color;
+  text-transform: uppercase;
+}
+
+.banner__header {
+  font-size: @header-size;
+  line-height: @header-size;
+  font-weight: @basic-weight;
+  padding-bottom: 25px;
+}
+
+.banner__discription {
+  font-size: @basic-size;
+  font-weight: @basic-weight;
+  line-height: @basic-size;
+  padding-bottom: 29px;
+}
+
+.banner__button {
+  background-color: @basic-background;
+  color: @white-color;
+  font-size: @basic-size;
+  font-weight: @basic-weight;
+  line-height: 18px;
+  padding: 7px 44px;
+  &:hover {
+    background-color: @button-background-hover;
+  }
+  &:focus {
+    color: @buttom-focus-text;
+  }
+}
