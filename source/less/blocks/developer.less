@@ -1,14 +1,14 @@
 .developer {
   padding-top: 22px;
-  &:focus {
-    .developer__info {
-      color: @link-special-focus;
-    }
-  }
 }
+
 .developer__info {
   font-size: @basic-size;
   color: @special-text;
   font-style: normal;
   line-height: 18px;
+
+  &:focus {
+    color: @link-special-focus;
+  }
 }
