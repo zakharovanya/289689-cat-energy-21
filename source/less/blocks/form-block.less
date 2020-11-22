@@ -14,7 +14,7 @@
 }
 
 .program-form__fieldset {
-  border-width: 0px;
+  border-width: 0;
 }
 
 .program-form__legend {
@@ -48,14 +48,17 @@
   font-weight: @basic-weight;
   font-size: 16px;
   text-transform: uppercase;
+
   &::-webkit-input-placeholder {
     color: @special-text;
     line-height: 1;
   }
+
   &::-moz-placeholder {
     color: @special-text;
     line-height: 1;
   }
+
   &:-ms-input-placeholder {
     color: @special-text;
     line-height: 1;
@@ -114,9 +117,11 @@
   padding: 7px 44px;
   margin-top: 34px;
   cursor: pointer;
+
   &:hover {
     background-color: @button-background-hover;
   }
+
   &:focus {
     color: @buttom-focus-text;
   }
