@@ -1,5 +1,8 @@
 .developer {
   padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .developer__info {
@@ -8,7 +11,21 @@
   font-style: normal;
   line-height: 18px;
 
+  .indent-resert;
+
   &:focus {
     color: @link-special-focus;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .developer {
+    flex-basis: 100% / 3;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+
+  .developer__info {
+    margin-right: 22px;
   }
 }
