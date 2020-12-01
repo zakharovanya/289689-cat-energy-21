@@ -1,6 +1,8 @@
 .advantages {
   background-color: @white-color;
   padding-left: @basic-padding;
+
+  .area;
 }
 
 .advantages__header {
@@ -25,10 +27,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .advantages {
-    .tablet-container;
-  }
-
   .advantages__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -41,10 +39,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages {
-    .desktop-container;
-  }
-
   .advantages__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

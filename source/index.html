@@ -69,7 +69,6 @@
     <main class="page-main">
       <h1 class="visually-hidden">Магазин функционального питания для котов «Кэт энерджи»</h1>
       <section class="banner">
-        <div class="banner__image"></div>
         <div class="banner__wrapper">
           <h2 class="banner__header">Функциональное питание для котов</h2>
           <p class="banner__discription">Занялся собой? Займись котом!</p>
@@ -120,20 +119,18 @@
         <div class="example__wrapper">
           <h2 class="example__header">Живой пример</h2>
           <p class="example__discription">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <form class="example-form">
-            <div class="example-form__wrapper">
-              <ul class="example-form__list list-reset">
-                <li class="example-form__item">
-                  <h4 class="example-form__title">5кг</h4>
-                  <p class="example-form__discription">снижение веса</p>
-                </li>
-                <li class="example-form__item">
-                  <h4 class="example-form__title">60 дней</h4>
-                  <p class="example-form__discription">затрачено времени</p>
-                </li>
-              </ul>
-              <p class="example-form__price">Затраты на питание: 15 000 РУБ.</p>
-            </div>
+          <div class="example-form">
+            <ul class="example-form__list list-reset">
+              <li class="example-form__item">
+                <h4 class="example-form__title">5кг</h4>
+                <p class="example-form__discription">снижение веса</p>
+              </li>
+              <li class="example-form__item">
+                <h4 class="example-form__title">60 дней</h4>
+                <p class="example-form__discription">затрачено времени</p>
+              </li>
+            </ul>
+            <p class="example-form__price">Затраты на питание: 15 000 РУБ.</p>
             <div class="example-form__image-wrapper">
               <img src="img/before-mobile1.png" alt="Кот до использования программы питания">
               <div class="example-form__range-wrapper">
@@ -142,15 +139,17 @@
                 <button class="example-form__button button-reset" type="button">Стало</button>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </section>
       <section class="map">
-        <div class="map__partnership">
-          <h4 class="map__partnership-header">Приглашаем к сотрудничеству дилеров!</h4>
-          <p class="map__partnership-discription">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="map__wrapper">
+          <div class="map__partnership">
+            <h4 class="map__partnership-header">Приглашаем к сотрудничеству дилеров!</h4>
+            <p class="map__partnership-discription">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </div>
-        <img src="img/location.png" alt="Адрес магазина кошачьего корма «Кэт энерджи»">
+        <img class="map__image" src="img/location.png" alt="Адрес магазина кошачьего корма «Кэт энерджи»">
       </section>
     </main>
     <footer class="page-footer">

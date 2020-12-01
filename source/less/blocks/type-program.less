@@ -1,6 +1,8 @@
 .type-program {
   padding-left: @basic-padding;
   padding-right: @basic-padding;
+
+  .area;
 }
 
 .type-program__item {
@@ -49,10 +51,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .type-program {
-    .tablet-container;
-  }
-
   .type-program__item {
     padding-left: 52px;
     padding-right: 62px;
@@ -71,10 +69,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .type-program {
-    .desktop-container;
-  }
-
   .type-program__list {
     display: grid;
     grid-template-columns: 1fr 1fr;

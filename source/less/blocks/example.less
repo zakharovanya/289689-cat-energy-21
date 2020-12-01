@@ -1,11 +1,11 @@
 .example {
   background-color: @alternative-background;
-  padding-top: 27px;
+  margin-top: 27px;
   padding-bottom: 30px;
 }
 
 .example__wrapper {
-  .min-container;
+  .area;
 }
 
 .example__header {
@@ -26,10 +26,6 @@
   .example {
     background-color: @white-color;
   }
-
-  .example__wrapper {
-    .tablet-container;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -44,10 +40,5 @@
   .example__discription {
     max-width: 436px;
     margin-bottom: 69px;
-  }
-
-  .example__wrapper {
-
-    .desktop-container;
   }
 }
