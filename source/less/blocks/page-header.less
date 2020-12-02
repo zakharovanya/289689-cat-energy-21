@@ -1,0 +1,29 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  .area;
+}
+
+.page-header__logo {
+  height: 66px;
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo-image {
+  flex-basis: 100% / 3;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    height: 44px;
+    padding-left: 0;
+  }
+}

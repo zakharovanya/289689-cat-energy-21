@@ -1,0 +1,29 @@
+.block-centering {
+  margin: 0 auto;
+}
+
+.indent-resert {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mobile: 320px;
+@tablet: ~"(min-width: 768px)";
+@tablet-area: 708px;
+
+@desktop: ~"(min-width: 1440px)";
+@desktop-area: 1220px;
+
+.area {
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile;
+
+  @media @tablet {
+    width: @tablet-area;
+  }
+
+  @media @desktop {
+    width: @desktop-area;
+  }
+}

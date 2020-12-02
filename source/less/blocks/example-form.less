@@ -1,15 +1,35 @@
+.example-form__item {
+  position: relative;
+}
+
 .example-form__title {
   font-family: @header-family;
   font-weight: @basic-weight;
   font-size: 24px;
   line-height: 1;
   text-transform: uppercase;
+  border: 1px solid @middle-gray-border;
+  border-radius: 3px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  margin-top: 0;
+}
+
+.example-form__range-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .example-form__discription {
   font-size: 12px;
   line-height: 1;
   color: @special-text;
+  position: absolute;
+  bottom: 18px;
+  background-color: @alternative-background;
+  left: 50%;
+  transform: translateX(-50%);
+  .indent-resert;
 }
 
 .example-form__price {
@@ -18,6 +38,7 @@
   font-weight: @basic-weight;
   line-height: @basic-padding;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .example-form__button {
@@ -27,4 +48,74 @@
   line-height: @basic-padding;
   text-transform: uppercase;
   padding: 5px;
+}
+
+.example-form__range {
+  flex-basis: 80%;
+}
+
+.example-form__list {
+  display: grid;
+  grid-template-columns: 124px 124px;
+  gap: 32px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .example-form__price {
+    text-align: right;
+    margin-top: 0;
+  }
+
+  .example-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .example-form__list,
+  .example-form__price {
+    flex-basis: 50%;
+  }
+
+  .example-form__discription {
+    background-color: @white-color;
+  }
+
+  .example-form__image-wrapper {
+    flex-basis: 100%;
+  }
+
+  .example-form__range-wrapper {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example-form__price {
+    text-align: left;
+    margin-top: 35px;
+  }
+
+  .example-form {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 50%;
+    //position: relative;
+  }
+
+  .example-form__image-wrapper {
+    //transform: translateY(-194px);
+    flex-basis: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  .example-form__range-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

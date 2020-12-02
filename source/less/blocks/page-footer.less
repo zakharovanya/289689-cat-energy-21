@@ -1,4 +1,29 @@
 .page-footer {
   background-color: @light-background;
-  padding: 39px @basic-padding 32px;
+  padding-top: 39px;
+  padding-bottom: 32px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .area;
+}
+
+.page-footer__logo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+  }
 }

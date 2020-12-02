@@ -1,6 +1,11 @@
 .example {
   background-color: @alternative-background;
-  padding: 27px @basic-padding 30px;
+  margin-top: 27px;
+  padding-bottom: 30px;
+}
+
+.example__wrapper {
+  .area;
 }
 
 .example__header {
@@ -15,4 +20,25 @@
   line-height: 18px;
   color: @special-text;
   padding-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: @white-color;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    position: relative;
+  }
+
+  .example__header {
+    margin-bottom: 76px;
+  }
+
+  .example__discription {
+    max-width: 436px;
+    margin-bottom: 69px;
+  }
 }

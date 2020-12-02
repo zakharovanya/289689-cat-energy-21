@@ -1,6 +1,8 @@
 .advantages {
   background-color: @white-color;
   padding-left: @basic-padding;
+
+  .area;
 }
 
 .advantages__header {
@@ -22,4 +24,24 @@
   font-size: @basic-size;
   line-height: 18px;
   color: @special-text;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 135px;
+  }
+
+  .advantages__item {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+  }
 }
