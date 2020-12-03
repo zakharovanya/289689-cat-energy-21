@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -70,7 +71,7 @@
         <h1 class="form-block__header">Подбор программы</h1>
         <p class="form-block__discription">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="program-form">
-          <fieldset class="program-form__fieldset">
+          <fieldset class="program-form__fieldset program-form__fieldset--question">
             <ul class="contact-list list-reset">
               <li class="contact-item">
                 <label class="contact-item__label" for="contact-name">Имя*:</label>
@@ -103,11 +104,11 @@
           <fieldset class="program-form__fieldset">
             <legend class="program-form__legend">Контактные данные (владельца кота)</legend>
             <ul class="contact-list list-reset">
-              <li class="contact-item">
+              <li class="contact-item item-wrapper">
                 <label class="contact-item__label" for="contact-email">E-mail*:</label>
                 <input class="contact-item__input" type="email" name="e-mail" id="contact-email" required placeholder="kuklachev@gmail.com">
               </li>
-              <li class="contact-item__label" class="contact-item">
+              <li class="contact-item item-wrapper">
                 <label class="contact-item__label" for="contact-phone">Телефон*:</label>
                 <input class="contact-item__input" type="tel" name="phone" id="contact-phone" required placeholder="8 (960) 900-60-90">
               </li>
@@ -138,16 +139,20 @@
               </li>
             </ul>
           </fieldset>
-          <button class="program-form__button button-reset" type="submit">Оставить заявку</button>
-          <p class="program-form__caption">* — Обязательные поля</p>
+          <div class="program-form__wrapper">
+            <button class="program-form__button button-reset" type="submit">Оставить заявку</button>
+            <p class="program-form__caption">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
       <section class="map">
-        <div class="map__partnership">
-          <h4 class="map__partnership-header">Приглашаем к сотрудничеству дилеров!</h4>
-          <p class="map__partnership-discription">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="map__wrapper">
+          <div class="map__partnership">
+            <h4 class="map__partnership-header">Приглашаем к сотрудничеству дилеров!</h4>
+            <p class="map__partnership-discription">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </div>
-        <img src="img/location.png" alt="Адрес магазина кошачьего корма «Кэт энерджи»">
+        <img class="map__image" src="img/location.png" alt="Адрес магазина кошачьего корма «Кэт энерджи»">
       </section>
     </main>
     <footer class="page-footer">

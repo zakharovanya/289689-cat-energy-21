@@ -3,9 +3,16 @@
   padding-bottom: 7px;
 }
 
+.contact-item,
 .contact-item__label {
-  padding-right: 13px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.contact-item__label {
   line-height: 18px;
+  margin: auto;
+  padding-right: 9px;
 }
 
 .contact-item__label,
@@ -37,4 +44,20 @@
   padding-bottom: 8.5px;
   padding-left: 13px;
   border: 1px solid @light-border;
+}
+
+@media (min-width: @tablet-width) {
+  .contact-item__label {
+    padding-right: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact-item__label {
+    padding-right: 20px;
+  }
+
+  .contact-item {
+    flex-basis: 536px;
+  }
 }
