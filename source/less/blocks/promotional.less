@@ -2,6 +2,10 @@
   background-color: @basic-background;
   margin-top: 39px;
   margin-bottom: 35px;
+  background-image: url("/img/gift-photo-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .promotional__text {
@@ -11,4 +15,15 @@
   font-size: @basic-size;
   line-height: 20px;
   padding: 48px 59px 43px;
+}
+
+@media (min-width: @tablet-width) {
+  .promotional {
+    background-image: url("/img/gift-photo-tablet.png");
+  }
+
+  .promotional__text {
+    font-size: 16px;
+    line-height: @basic-padding;
+  }
 }
