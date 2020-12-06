@@ -2,7 +2,7 @@
   background-color: @basic-background;
   margin-top: 39px;
   margin-bottom: 35px;
-  background-image: url("/img/gift-photo-mobile.png");
+  background-image: url("../img/gift-photo-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,11 +19,20 @@
 
 @media (min-width: @tablet-width) {
   .promotional {
-    background-image: url("/img/gift-photo-tablet.png");
+    background-image: url("../img/gift-photo-tablet.jpg");
   }
 
   .promotional__text {
     font-size: 16px;
     line-height: @basic-padding;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promotional {
+    background-image: url("../img/gift-photo-desktop.jpg");
+    height: 289px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
