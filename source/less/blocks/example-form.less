@@ -65,6 +65,9 @@
   .example-form__price {
     text-align: right;
     margin-top: 0;
+    font-size: @basic-padding;
+    line-height: @basic-padding;
+    flex-basis: 25%;
   }
 
   .example-form {
@@ -74,17 +77,29 @@
     text-align: center;
   }
 
-  .example-form__list,
-  .example-form__price {
-    flex-basis: 50%;
+  .example-form__list {
+    grid-template-columns: 162px 162px;
+  }
+
+  .example-form__title {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 14px;
+    padding-top: 15px;
+    padding-bottom: 20px;
   }
 
   .example-form__discription {
     background-color: @white-color;
+    font-size: @basic-size;
+    line-height: @basic-size;
+    min-width: 128px;
+    bottom: 7px;
   }
 
   .example-form__image-wrapper {
     flex-basis: 100%;
+    margin-top: 72px;
   }
 
   .example-form__range-wrapper {
@@ -96,7 +111,8 @@
 @media (min-width: @desktop-width) {
   .example-form__price {
     text-align: left;
-    margin-top: 35px;
+    margin-top: 53px;
+    margin-bottom: 0;
   }
 
   .example-form {
@@ -104,18 +120,34 @@
     justify-content: flex-start;
     flex-basis: 50%;
     //position: relative;
+    margin-bottom: 45px;
+  }
+
+  .example-form__discription {
+    background-color: @light-background;
   }
 
   .example-form__image-wrapper {
     //transform: translateY(-194px);
     flex-basis: 50%;
     position: absolute;
-    top: 0;
+    top: auto;
+    bottom: 0;
     left: 50%;
+    margin-top: 0;
+  }
+
+  .example-form__image {
+    height: 496px;
   }
 
   .example-form__range-wrapper {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .example-form__button {
+    font-size: @basic-padding;
+    line-height: 30px;
   }
 }

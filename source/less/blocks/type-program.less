@@ -1,15 +1,19 @@
 .type-program {
-  padding-left: @basic-padding;
-  padding-right: @basic-padding;
 
   .area;
 }
 
-.type-program__item {
-  background-color: @light-background;
+.type-program__wrapper {
   padding-left: @basic-padding;
   padding-right: @basic-padding;
+}
+
+.type-program__item {
+  background-color: @light-background;
+  //padding-left: @basic-padding;
+  //padding-right: @basic-padding;
   padding-bottom: @basic-padding;
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: @basic-padding;
@@ -24,6 +28,20 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  //position: relative;
+  padding-left: 69px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30;
+    transform: 0;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: @basic-background;
+    border-radius: 50%;
+  }
 
   .indent-resert;
 }
@@ -35,6 +53,7 @@
   padding-bottom: 23px;
   margin-bottom: @basic-padding;
   border-bottom: 1px solid @basic-border;
+  max-width: 227px;
 
   .indent-resert;
 }
@@ -51,6 +70,24 @@
 }
 
 @media (min-width: @tablet-width) {
+  .type-program__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .type-program__header {
+    padding-left: 0;
+    font-size: @header-size;
+    line-height: @header-size;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      left: auto;
+      right: 62px;
+    }
+  }
+
   .type-program__item {
     padding-left: 52px;
     padding-right: 62px;
@@ -65,6 +102,19 @@
 
   .type-program__discription {
     border-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 337px;
+  }
+
+  .type-program__link {
+    font-size: @basic-padding;
+    line-height: 30px;
+    max-width: 168px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -77,8 +127,27 @@
   }
 
   .type-program__item {
+    display: block;
+
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+  }
+
+  .type-program__header {
+    padding-left: 162px;
+    font-size: @header-size;
+    line-height: @header-size;
+    padding-top: 77px;
+    padding-bottom: 73px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      transform: translateY(0);
+      left: 52px;
+      right: auto;
     }
   }
 }
