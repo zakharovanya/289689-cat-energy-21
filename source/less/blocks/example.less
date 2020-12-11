@@ -4,8 +4,15 @@
   padding-bottom: 30px;
 }
 
-.example__wrapper {
+.example__container {
+
   .area;
+}
+
+.example__wrapper {
+  padding-left: @basic-padding;
+  padding-right: @basic-padding;
+  position: relative;
 }
 
 .example__header {
@@ -25,6 +32,33 @@
 @media (min-width: @tablet-width) {
   .example {
     background-color: @white-color;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      height: 462px;
+      background-color: @light-background;
+    }
+  }
+
+  .example__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .example__header {
+    margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__discription {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -34,11 +68,12 @@
   }
 
   .example__header {
-    margin-bottom: 76px;
+    margin-bottom: 146px;
   }
 
   .example__discription {
     max-width: 436px;
+    padding-bottom: 0;
     margin-bottom: 69px;
   }
 }
