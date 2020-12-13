@@ -14,16 +14,34 @@
 }
 
 .form-block {
+  .area;
+}
+
+.form-block__wrapper {
   padding-left: 20px;
   padding-right: 20px;
-
-  .area;
 }
 
 @media (min-width: @tablet-width) {
   .form-block {
-    padding-left: 20px;
     padding-right: 0;
+  }
+
+  .form-block__header {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  .form-block__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-block__discription {
+    font-size: @basic-padding;
+    line-height: 30px;
+    margin-bottom: 66px;
   }
 }
 
