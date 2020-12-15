@@ -25,23 +25,24 @@
 
   &::-webkit-input-placeholder {
     color: @special-text;
-    line-height: 1;
+    line-height: 30px;
   }
 
   &::-moz-placeholder {
     color: @special-text;
-    line-height: 1;
+    line-height: 30px;
   }
 
   &:-ms-input-placeholder {
     color: @special-text;
-    line-height: 1;
+    line-height: 30px;
   }
 }
 
 .contact-item__input {
   padding-top: 8.5px;
   padding-bottom: 8.5px;
+  line-height: 18px;
   padding-left: 13px;
   border: 1px solid @light-border;
 }
@@ -49,6 +50,12 @@
 @media (min-width: @tablet-width) {
   .contact-item__label {
     padding-right: 18px;
+  }
+
+  .contact-item__label,
+  .contact-item__input {
+    font-size: @basic-padding;
+    line-height: 30px;
   }
 }
 
