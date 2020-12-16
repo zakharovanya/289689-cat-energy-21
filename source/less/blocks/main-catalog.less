@@ -19,7 +19,32 @@
 .main-catalog__item {
   padding-top: 19px;
   padding-bottom: 25px;
-  border-top: 1px solid @extra-light-border;
+  position: relative;
+  //border-top: 1px solid @extra-light-border;
+
+  &:last-child {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 100vw;
+      background-color: @extra-light-border;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100vw;
+    background-color: @extra-light-border;
+  }
 }
 
 .main-catalog__link {
@@ -41,6 +66,13 @@
     text-transform: uppercase;
     margin: 0;
   }
+}
+
+.plus {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  grid-column-start: -1;
+  grid-column-end: 1;
 }
 
 .main-catalog__product-caption {
@@ -140,6 +172,11 @@
     padding-right: 0;
   }
 
+  .main-catalog__header {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
   .main-catalog__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -156,8 +193,10 @@
     &::before {
       content: "";
       position: absolute;
+      top: auto;
       bottom: 0;
       left: 0;
+      transform: translateX(0);
       background-color: @light-background;
       border: 0;
       min-height: 430px;
@@ -166,6 +205,10 @@
 
     &:last-child {
       display: flex;
+
+      &::after {
+        height: 0;
+      }
 
       &::before {
         background-color: transparent;
@@ -177,8 +220,9 @@
   .main-catalog__wrapper {
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
+    //align-self: flex-end;
     position: relative;
+    justify-content: center;
   }
 
   .main-catalog__product-list {
@@ -190,6 +234,7 @@
   .main-catalog__product-description {
     padding-top: 7px;
     padding-bottom: 9px;
+    border-bottom: 1px solid @middle-gray-border;
   }
 
   .main-catalog__link {
@@ -220,6 +265,10 @@
   .main-catalog__button--button-all {
     padding-top: 10px;
     padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -228,15 +277,21 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .plus {
+    margin-bottom: 0;
+  }
+
   .main-catalog__link {
     .main-catalog__product-name {
       margin-right: @basic-padding;
       margin-left: @basic-padding;
+      line-height: 21px;
     }
   }
 
   .main-catalog__button {
     grid-column-start: 2;
     grid-column-end: 2;
+    line-height: @basic-padding;
   }
 }
