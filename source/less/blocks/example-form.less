@@ -17,7 +17,7 @@
 
 .example-form__range-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .example-form__discription {
@@ -51,7 +51,107 @@
 }
 
 .example-form__range {
-  flex-basis: 80%;
+  flex-basis: 84px;
+  width: 84px;
+  appearance: none;
+  margin: 10px 7px;
+  background-color: transparent;
+  position: relative;
+
+  &::-webkit-slider-runnable-track {
+    width: 84px;
+    height: 14px;
+    cursor: pointer;
+    background-color: @white-color;
+    border-radius: 6px;
+    border: 1px solid @middle-gray-border;
+  }
+
+  &::-webkit-slider-thumb {
+    height: 6px;
+    width: 35px;
+    border-radius: 6px;
+    background-color: @basic-background;
+    cursor: pointer;
+    appearance: none;
+    //margin-top: 4px;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+  }
+
+  &::-moz-range-track {
+    width: 84px;
+    height: 14px;
+    cursor: pointer;
+    background-color: @basic-background;
+    border-radius: 6px;
+    border: 1px solid @middle-gray-border;
+  }
+
+  &::-moz-range-thumb {
+    height: 6px;
+    width: 35px;
+    border-radius: 6px;
+    background-color: @basic-background;
+    cursor: pointer;
+    appearance: none;
+    //margin-top: 4px;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+  }
+
+  &::-ms-track {
+    width: 84px;
+    height: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 39px 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background-color: @special-text;
+    border: 0 solid @basic-background;
+    border-radius: 50px;
+  }
+
+  &::-ms-fill-upper {
+    background-color: @special-text;
+    border: 0 solid @basic-background;
+    border-radius: 50px;
+  }
+
+  &::-ms-thumb {
+    height: 6px;
+    width: 35px;
+    border-radius: 6px;
+    background-color: @basic-background;
+    cursor: pointer;
+    appearance: none;
+    //margin-top: 4px;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::-webkit-slider-runnable-track {
+      background-color: @light-green;
+    }
+
+    &::-ms-fill-lower {
+      background-color: @light-green;
+    }
+
+    &::-ms-fill-upper {
+      background-color: @light-green;
+    }
+  }
 }
 
 .example-form__list {
@@ -97,14 +197,66 @@
     bottom: 7px;
   }
 
+  .example-form__button {
+    font-size: @basic-padding;
+    line-height: 30px;
+    position: relative;
+    padding-bottom: 3px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-image: url("../img/underline.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
   .example-form__image-wrapper {
     flex-basis: 100%;
-    margin-top: 72px;
+    margin-top: 51px;
   }
 
   .example-form__range-wrapper {
     margin-left: 40px;
     margin-right: 40px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  }
+
+  .example-form__range {
+    flex-basis: 80%;
+    width: 428px;
+    margin: 0 24px;
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 6px;
+      cursor: pointer;
+      background-color: @ultra-gray;
+      border-radius: 6px;
+      border: 0;
+    }
+
+    &::-webkit-slider-thumb {
+      height: 34px;
+      width: 34px;
+      background-color: transparent;
+      background-image: url("../img/slidercontrol.svg");
+      background-size: cover;
+      cursor: pointer;
+      appearance: none;
+      margin-top: -14px;
+      position: relative;
+    }
   }
 }
 
@@ -144,10 +296,5 @@
   .example-form__range-wrapper {
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .example-form__button {
-    font-size: @basic-padding;
-    line-height: 30px;
   }
 }
