@@ -23,7 +23,7 @@
     left: 0;
     width: 30px;
     height: 30px;
-    border: 1px solid @disabled-gray;
+    border: 1px solid @middle-gray-border;
   }
 
   &::after {
@@ -32,6 +32,12 @@
     width: 13.5px;
     height: 13.55px;
     background-size: cover;
+  }
+
+  &:hover {
+    &::before {
+      border: 1px solid @disabled-extra-gray;
+    }
   }
 }
 
