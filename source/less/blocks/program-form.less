@@ -44,7 +44,7 @@
   padding-left: 13px;
   border: 1px solid @light-border;
   min-height: 150px;
-  width: 100%;
+  width: calc(100% - 20px);
 
   &::-webkit-input-placeholder {
     color: @special-text;
@@ -94,13 +94,19 @@
   }
 
   &::before {
-    border: 1px solid @disabled-gray;
+    border: 1px solid @middle-gray-border;
   }
 
   &::after {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::before {
+      border: 1px solid @disabled-extra-gray;
+    }
   }
 }
 
