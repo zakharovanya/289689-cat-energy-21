@@ -34,6 +34,7 @@
   .example {
     background-color: @white-color;
     position: relative;
+    border: 1px solid @super-light-border;
 
     &::before {
       content: "";
@@ -66,6 +67,8 @@
 @media (min-width: @desktop-width) {
   .example {
     position: relative;
+    border-top: 0;
+    margin-top: 0;
 
     &::after {
       content: "";

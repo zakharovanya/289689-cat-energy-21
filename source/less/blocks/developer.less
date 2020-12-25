@@ -5,17 +5,32 @@
   align-items: center;
 }
 
-.developer__info {
-  font-size: @basic-size;
+.developer__link {
+  font-size: 16px;
   color: @special-text;
   font-style: normal;
   line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
 
   .indent-resert;
 
   &:focus {
-    color: @link-special-focus;
+    opacity: 0.3;
   }
+
+  &:hover,
+  &:focus {
+    .developer__icon {
+      fill: @basic-background;
+    }
+  }
+}
+
+.developer__icon {
+  fill: @special-text;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,7 +40,11 @@
     padding-top: 0;
   }
 
-  .developer__info {
-    margin-right: 22px;
+  .developer__link {
+    flex-basis: unset;
+  }
+
+  .developer__icon {
+    margin-left: 22px;
   }
 }
