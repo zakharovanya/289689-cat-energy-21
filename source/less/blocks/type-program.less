@@ -43,38 +43,21 @@
     border-radius: 50%;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-  }
-
   .indent-resert;
 }
 
-.type-program__header--slim {
-  &::after {
-    left: 29px;
-    top: 21px;
-    height: 50px;
-    width: 36px;
-    background-image: url("../img/cat-slim.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-  }
+.type-program__header-img {
+  position: absolute;
 }
 
-.type-program__header--fat {
-  &::after {
-    top: 35px;
-    left: 13px;
-    height: 28px;
-    width: 67px;
-    background-image: url("../img/cat-pro.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-  }
+.type-program__header-img--slim {
+  left: 29px;
+  top: 21px;
+}
+
+.type-program__header-img--pro {
+  top: 35px;
+  left: 13px;
 }
 
 .type-program__discription {
@@ -119,24 +102,20 @@
     }
   }
 
-  .type-program__header--slim {
-    &::after {
-      top: 81px;
-      left: auto;
-      right: 92px;
-      width: 140px;
-      height: 192px;
-    }
+  .type-program__header-img--slim {
+    top: 81px;
+    left: auto;
+    right: 92px;
+    width: 140px;
+    height: 192px;
   }
 
-  .type-program__header--fat {
-    &::after {
-      top: 135px;
-      left: auto;
-      right: 28px;
-      width: 268px;
-      height: 112px;
-    }
+  .type-program__header-img--pro {
+    top: 135px;
+    left: auto;
+    right: 28px;
+    width: 268px;
+    height: 112px;
   }
 
   .type-program__item {
@@ -202,23 +181,19 @@
     }
   }
 
-  .type-program__header--slim {
-    &::after {
-      top: 41px;
-      left: 67px;
-      right: auto;
-      width: 70px;
-      height: 97px;
-    }
+  .type-program__header-img--slim {
+    top: 41px;
+    left: 67px;
+    right: auto;
+    width: 70px;
+    height: 97px;
   }
 
-  .type-program__header--fat {
-    &::after {
-      top: 67px;
-      left: 33px;
-      right: auto;
-      width: 134px;
-      height: 56px;
-    }
+  .type-program__header-img--pro {
+    top: 67px;
+    left: 33px;
+    right: auto;
+    width: 134px;
+    height: 56px;
   }
 }

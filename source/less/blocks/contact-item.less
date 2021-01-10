@@ -7,6 +7,7 @@
 .contact-item__label {
   display: grid;
   grid-template-columns: auto 1fr;
+  position: relative;
 }
 
 .contact-item__label {
@@ -55,6 +56,23 @@
   }
 }
 
+.contact-item__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact-item__icon--email {
+  right: 15px;
+  stroke: @dark-gray;
+  fill: @white-color;
+}
+
+.contact-item__icon--phone {
+  right: 13px;
+  fill: @basic-text;
+}
+
 @media (min-width: @tablet-width) {
   .contact-item__label {
     padding-right: 18px;
@@ -64,6 +82,14 @@
   .contact-item__input {
     font-size: @basic-padding;
     line-height: 30px;
+  }
+
+  .contact-item__icon--email {
+    right: 19px;
+  }
+
+  .contact-item__icon--phone {
+    right: 17px;
   }
 }
 
