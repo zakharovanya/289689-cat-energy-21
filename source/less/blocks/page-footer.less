@@ -18,6 +18,20 @@
 .page-footer__logo {
   text-align: center;
   margin-bottom: 32px;
+  opacity: 1;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__logo-img {
+  fill: @basic-middle-text;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,9 +39,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .page-footer__logo {
     margin-bottom: 0;
+    flex-basis: calc(100% / 3);
+    text-align: left;
   }
 }

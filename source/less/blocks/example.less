@@ -1,6 +1,6 @@
 .example {
   background-color: @alternative-background;
-  margin-top: 27px;
+  margin-top: 45px;
   padding-bottom: 30px;
 }
 
@@ -34,6 +34,8 @@
   .example {
     background-color: @white-color;
     position: relative;
+    border: 1px solid @super-light-border;
+    margin-top: 27px;
 
     &::before {
       content: "";
@@ -66,6 +68,8 @@
 @media (min-width: @desktop-width) {
   .example {
     position: relative;
+    border-top: 0;
+    margin-top: 0;
 
     &::after {
       content: "";
