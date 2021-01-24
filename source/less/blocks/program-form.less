@@ -9,8 +9,8 @@
   line-height: 26px;
   font-family: @header-family;
   font-weight: @basic-weight;
-  margin-bottom: 34px;
-  margin-top: 26px;
+  margin-bottom: 28px;
+  margin-top: 10px;
   padding-right: 20px;
   background-color: @white-color;
   z-index: 10;
@@ -43,8 +43,10 @@
   padding-bottom: 8.5px;
   padding-left: 13px;
   border: 1px solid @light-border;
-  min-height: 150px;
+  min-height: 130px;
   width: calc(100% - 20px);
+  margin-top: 13px;
+  margin-bottom: 12px;
 
   &::-webkit-input-placeholder {
     color: @special-text;
@@ -139,11 +141,12 @@
   line-height: 18px;
   font-weight: @basic-weight;
   text-align: center;
+  margin-top: 22px;
 }
 
 .program-form__wrapper {
-  margin-top: 34px;
-  margin-bottom: 32px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .program-form__button {
@@ -153,7 +156,7 @@
   font-size: 16px;
   font-family: @header-family;
   font-weight: @basic-weight;
-  padding: 7px 44px;
+  padding: 10px 44px;
   cursor: pointer;
   width: 100%;
 
@@ -167,19 +170,29 @@
 }
 
 @media (min-width: @tablet-width) {
+  .program-form {
+    margin-right: 36px;
+  }
+
   .program-form__fieldset {
     padding: 0;
-    margin-bottom: 60px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
   }
 
   .program-form__list {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 30px;
   }
 
   .program-form__item {
-    flex-basis: 50%;
+    flex-basis: 45%;
+    margin-bottom: 20px;
   }
 
   .program-form__caption {
@@ -193,6 +206,7 @@
     grid-template-columns: 282px auto;
     gap: 60px;
     margin-bottom: 72px;
+    margin-top: 20px;
   }
 
   .program-form__legend {
@@ -209,6 +223,11 @@
       height: 2px;
       background-color: @basic-background;
     }
+  }
+
+  .program-form__textarea {
+    margin-top: 48px;
+    min-height: 150px;
   }
 
   .program-form__textarea,
@@ -239,8 +258,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .program-form {
+    margin-right: 0;
+  }
+
   .program-form__item {
-    flex-basis: 100% / 4;
+    flex-basis: 100% / 5;
   }
 
   .program-form__fieldset--question {
@@ -253,6 +276,19 @@
     grid-template-columns: 568px auto;
     gap: 80px;
     margin-bottom: 80px;
+    margin-top: 28px;
+  }
+
+  .program-form__wrapper-legend {
+    &::before,
+    &::after {
+      top: 38%;
+    }
+  }
+
+  .program-form__textarea {
+    padding-top: 12.5px;
+    padding-left: 17px;
   }
 
   .program-form__button {

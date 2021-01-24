@@ -18,6 +18,7 @@
 .example-form__range-wrapper {
   display: flex;
   justify-content: center;
+  margin-top: 46px;
 }
 
 .example-form__discription {
@@ -29,6 +30,8 @@
   background-color: @alternative-background;
   left: 50%;
   transform: translateX(-50%);
+  padding-left: 10px;
+  padding-right: 10px;
   .indent-resert;
 }
 
@@ -39,6 +42,7 @@
   line-height: @basic-padding;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 0;
 }
 
 .example-form__button {
@@ -48,6 +52,11 @@
   line-height: @basic-padding;
   text-transform: uppercase;
   padding: 5px;
+}
+
+.example-form__image-wrapper {
+  margin-top: 40px;
+  //margin-bottom: 45px;
 }
 
 .example-form__range {
@@ -179,6 +188,7 @@
 
   .example-form__list {
     grid-template-columns: 162px 162px;
+    gap: 40px;
   }
 
   .example-form__title {
@@ -223,19 +233,19 @@
   }
 
   .example-form__range-wrapper {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 62px;
+    margin-right: 62px;
     justify-content: space-between;
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     left: 0;
     right: 0;
   }
 
   .example-form__range {
-    flex-basis: 80%;
+    flex-basis: 68%;
     width: 428px;
-    margin: 0 24px;
+    margin: 0 0;
 
     &::-webkit-slider-runnable-track {
       width: 100%;
@@ -247,14 +257,14 @@
     }
 
     &::-webkit-slider-thumb {
-      height: 34px;
-      width: 34px;
+      height: 42px;
+      width: 42px;
       background-color: transparent;
       background-image: url("../img/slidercontrol.svg");
       background-size: cover;
       cursor: pointer;
       appearance: none;
-      margin-top: -14px;
+      margin-top: -20px;
       position: relative;
     }
   }
@@ -263,8 +273,12 @@
 @media (min-width: @desktop-width) {
   .example-form__price {
     text-align: left;
-    margin-top: 53px;
+    margin-top: 46px;
     margin-bottom: 0;
+  }
+
+  .example-form__price-count {
+    margin-left: 60px;
   }
 
   .example-form {
@@ -275,6 +289,10 @@
     margin-bottom: 45px;
   }
 
+  .example-form__title {
+    margin-bottom: 10px;
+  }
+
   .example-form__discription {
     background-color: @light-background;
   }
@@ -283,18 +301,26 @@
     //transform: translateY(-194px);
     flex-basis: 50%;
     position: absolute;
-    top: auto;
+    top: -16px;
     bottom: 0;
-    left: 50%;
+    left: 47%;
     margin-top: 0;
   }
 
   .example-form__image {
-    height: 496px;
+    height: 656px;
+    width: 690px;
+  }
+
+  .example-form__range {
+    flex-basis: 80%;
+    margin: 0 20px;
   }
 
   .example-form__range-wrapper {
-    margin-left: 0;
+    margin-left: 70px;
     margin-right: 0;
+    bottom: -10px;
+    justify-content: center;
   }
 }

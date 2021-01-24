@@ -1,6 +1,6 @@
 .main-nav__item {
-  padding-top: @basic-padding;
-  margin-bottom: @basic-padding;
+  padding-top: 22px;
+  margin-bottom: 22px;
   border-top: 1px solid @super-light-border;
 }
 
@@ -8,7 +8,7 @@
 .main-nav__link {
   font-family: @header-family;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 20px;
   text-align: center;
   color: @link-color;
   text-transform: uppercase;
@@ -43,6 +43,7 @@
   position: absolute;
   top: -40px;
   right: @basic-padding;
+  display: none;
 }
 
 .main-nav--closed {
@@ -121,8 +122,9 @@
 
   .main-nav__item {
     border-top: 0;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-top: 37px;
+    margin-bottom: @basic-padding;
 
     &:not(:last-child) {
       margin-right: 34px;

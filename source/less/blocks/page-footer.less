@@ -1,6 +1,6 @@
 .page-footer {
   background-color: @light-background;
-  padding-top: 39px;
+  padding-top: 35px;
   padding-bottom: 32px;
 }
 
@@ -17,7 +17,7 @@
 
 .page-footer__logo {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
   opacity: 1;
   cursor: pointer;
 
@@ -47,5 +47,11 @@
     margin-bottom: 0;
     flex-basis: calc(100% / 3);
     text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding-top: 44px;
   }
 }
