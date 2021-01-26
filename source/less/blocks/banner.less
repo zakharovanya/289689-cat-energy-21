@@ -172,7 +172,7 @@
 @media (min-width: @desktop-width) {
   .banner {
     display: flex;
-    height: 564px;
+    min-height: 564px;
     overflow: hidden;
     position: inherit;
 
@@ -207,6 +207,12 @@
     justify-content: space-between;
   }
 
+  .banner__discription {
+    max-width: 414px;
+    z-index: 1;
+    position: relative;
+  }
+
   .banner__wrapper-text {
     padding-top: 35px;
     padding-left: 60px;
@@ -216,7 +222,11 @@
   source {
     width: 552px;
     height: 499px;
-    margin-top: -315px;
-    transform: translateX(-36%);
+    //margin-top: -315px;
+    //transform: translateX(-36%);
+    position: absolute;
+    top: 32px;
+    right: 210px;
+    margin: 0;
   }
 }

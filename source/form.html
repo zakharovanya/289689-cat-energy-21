@@ -222,25 +222,25 @@
                 </li>
                 <li class="contact-item">
                   <label class="contact-item__label" for="contact-weight">Вес (кг)*:</label>
-                  <input class="contact-item__input" type="number" name="weight" id="contact-weight" required placeholder="7">
+                  <input class="contact-item__input" type="text" name="weight" id="contact-weight" required placeholder="7">
                 </li>
                 <li class="contact-item">
                   <label class="contact-item__label" for="contact-old">Возраст (лет):</label>
-                  <input class="contact-item__input" type="number" name="old" id="contact-old" required placeholder="7">
+                  <input class="contact-item__input" type="text" name="old" id="contact-old" required placeholder="7">
                 </li>
               </ul>
               <ul class="radio-list list-reset">
                 <li class="radio-item">
                   <input class="visually-hidden radio-item__input" type="radio" id="radio-slim" name="radio-name" value="slim" checked>
-                  <label class="radio-item__label" for="radio-slim">Похудение</label>
+                  <label class="radio-item__label" for="radio-slim" tabindex="0">Похудение</label>
                 </li>
                 <li class="radio-item">
                   <input class="visually-hidden radio-item__input" type="radio" id="radio-weight" name="radio-name" value="weight">
-                  <label class="radio-item__label" for="radio-weight">Набор массы</label>
+                  <label class="radio-item__label" for="radio-weight" tabindex="0">Набор массы</label>
                 </li>
                 <li class="radio-item">
                   <input class="visually-hidden radio-item__input" type="radio" id="radio-unknown" name="radio-name" value="unknown">
-                  <label class="radio-item__label" for="radio-unknown">Не знаю (Нужен ваш совет)</label>
+                  <label class="radio-item__label" for="radio-unknown" tabindex="0">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
@@ -278,19 +278,19 @@
               <ul class="program-form__list list-reset">
                 <li class="program-form__item">
                   <input class="visually-hidden program-form__checkbox" type="checkbox" name="sweetener" id="checkbox-sweetener" checked>
-                  <label class="program-form__label" for="checkbox-sweetener">Сахарозаменитель</label>
+                  <label class="program-form__label" for="checkbox-sweetener" tabindex="0">Сахарозаменитель</label>
                 </li>
                 <li class="program-form__item">
                   <input class="visually-hidden program-form__checkbox" type="checkbox" name="water" id="checkbox-water">
-                  <label class="program-form__label" for="checkbox-water">Питьевая вода</label>
+                  <label class="program-form__label" for="checkbox-water" tabindex="0">Питьевая вода</label>
                 </li>
                 <li class="program-form__item">
                   <input class="visually-hidden program-form__checkbox" type="checkbox" name="milk" id="checkbox-milk">
-                  <label class="program-form__label" for="checkbox-milk">Молоко</label>
+                  <label class="program-form__label" for="checkbox-milk" tabindex="0">Молоко</label>
                 </li>
                 <li class="program-form__item">
                   <input class="visually-hidden program-form__checkbox" type="checkbox" name="vitamins" id="checkbox-vitamins">
-                  <label class="program-form__label" for="checkbox-vitamins">Витамины</label>
+                  <label class="program-form__label" for="checkbox-vitamins" tabindex="0">Витамины</label>
                 </li>
               </ul>
             </fieldset>
@@ -322,21 +322,21 @@
           </a>
           <ul class="social-list list-reset">
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--vkontakte" href="/">
+              <a class="social-list__link social-list__link--vkontakte" href="/" aria-label="Vkontakte">
                 <svg class="social-list__link-icon social-list__link-icon--vk" width="23" height="16">
                   <use xlink:href="#icon-vk"></use>
                 </svg>
                 </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--instagram" href="/">
+              <a class="social-list__link social-list__link--instagram" href="/" aria-label="Instagram">
                 <svg class="social-list__link-icon social-list__link-icon--instagram" width="16" height="16">
                   <use xlink:href="#icon-inst"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--facebook" href="/">
+              <a class="social-list__link social-list__link--facebook" href="/" aria-label="Facebook">
                 <svg class="social-list__link-icon social-list__link-icon--facebook" width="22" height="22">
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
